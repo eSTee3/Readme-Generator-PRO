@@ -54,8 +54,14 @@ inquirer
         type: 'list',
         message: 'Please use up/down arrow keys to choose an appropriate license:',
         name: 'license',
-        choices: ["Apache 2.0","GNU General Public v3.0","MIT ","BSD 2-Clause","BSD 3-Clause","Boost Software 1.0","Creative Commons Zero v1.0 Universal","Eclipse Public 2.0","GNU Affero General Public v3.0","GNU General Public v2.0","GNU Lesser General Public v2.1","Mozilla Public 2.0","The Unlicense"],
-      },
+        choices: ["GNU AGPLv3",
+        "GNU GPLv3","GNU LGPLv3",
+        "Mozilla Public License 2.0",
+        "Apache License 2.0",
+        "MIT License",
+        "Boost Software License 1.0",
+        "The Unlicense"],
+      }
     ])
     .then((data) => {
     
@@ -63,29 +69,46 @@ inquirer
 const filename = `${data.name.toLowerCase().replace(/\s/g, '')}.md`;
 
     // This populates the entirety of the readme file
-    fs.writeFile(filename, `<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./assets/style.css">
-        <title>Document</title>
+    fs.writeFile(filename,`
+# ${data.name}
+![badge](https://img.shields.io/badge/License-${data.license.replace(/\s/g, '')}-blue)
 
-    </head>
-    <body>
-        <h1 class="header">${data.name}</h1>
-            <p>${data.bio}</p>
-        <ul>
-            <li>Location: ${data.location}</li>
-            <li>LinkedIn: <a href="${data.linkedIn}">${data.linkedIn}</a></li>
-            <li>My GitHub Profile: <a href="https://www.github.com/${data.gitHub}">${data.gitHub}</a></li>
-        </ul>
-    </body>
-    </html>`
+## Table of Contents
+- [Description](#Description)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Contributing](#Contributing)
+- [Tests](#Tests)
+- [License](#License)
+- [Questions](#Questions)
+
+# Description
+${data.description}
+
+# Installation
+${data.description}
+
+# Usage
+${data.description}
+
+# Contributing
+${data.contribute}
+
+# Tests
+${data.testing}
+
+# License
+You can find the ${data.license} license details as well as all others [HERE](https://choosealicense.com/licenses/)
+
+# Questions
+- My GitHub Profile: [${data.gitHub}](https://www.github.com/${data.gitHub})
+- Please email me at ${data.email} with any additional questions
+`
+    
+        // This will message the user, stating that the file creation is completed, as well as the name of the resulting file.
         , (err) => {
         err ? console.log(err) : console.log(
-            "Thank you!  Your auto-generated readme file ("+`${data.name.toLowerCase().replace(/\s/g, '')}.md`+") has been created.  Please feel free to rename the file and place it into the root of your project's repository:"
+            "\nThank you!\n\nYour auto-generated readme file ("+`${data.name.toLowerCase().replace(/\s/g, '')}.md`+") has been created.  Please add it to the root of "+`${data.name}`+"'s repository."
             );
     });
 });
