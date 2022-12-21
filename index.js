@@ -16,7 +16,7 @@ inquirer
     },
     {
         type: "input",
-        message: "Please enter your GitHub name:",
+        message: "Please enter your GitHub username:",
         name: "gitHub",
     },
     {
@@ -86,10 +86,10 @@ ${data.description}
 - [Questions](#Questions)
 
 # Installation
-${data.description}
+${data.installation}
 
 # Usage
-${data.description}
+${data.usage}
 
 # License
 This application is covered under the **_${data.license}_** agreement.  You can find its details, as well as all other available licensing, below:
@@ -110,6 +110,23 @@ ${data.testing}
 # Questions?
 - My GitHub Profile: [${data.gitHub}](https://www.github.com/${data.gitHub})
 - Please email me at ${data.email} with any additional questions
+
+---
+---
+### The above readme was automatically generated using the following data:
+
+Item | Data Entered
+--- | ---
+Project | *${data.name}*
+GitHub Name | *${data.gitHub}*
+eMail Address | *${data.email}*
+Description | *${data.description}*
+Installation | *${data.installation}*
+Usage | *${data.usage}*
+Contribution | *${data.contribute}*
+Testing | *${data.testing}*
+License | *${data.license}*
+
 `
     
         // This will message the user, stating that the file creation is completed, as well as the name of the resulting file.
