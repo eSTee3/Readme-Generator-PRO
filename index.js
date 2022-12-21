@@ -4,6 +4,7 @@ const inquirer = require("inquirer");
 inquirer
     .prompt([
     {
+        // Decided to add a pre-question prompt, explaining the process to the user
         type: "input",
         message: "I will ask you a series of questions that will allow me to auto-generate a README.md file that is customized for your project.\n\nNOTE: The ENTER key will immediately submit your answers or entries.\n\nPlease hit the ENTER key to begin",
         name: "confirmStart",
@@ -49,6 +50,7 @@ inquirer
         name: "testing",
       },
       {
+        // This is a list of all GitHub licenses that are in the drop-down at time of new project creation
         type: 'list',
         message: 'Please use up/down arrow keys to choose an appropriate license:',
         name: 'license',
@@ -57,7 +59,10 @@ inquirer
     ])
     .then((data) => {
     
+// This will create a ".md" file with the user's project name as its name
 const filename = `${data.name.toLowerCase().replace(/\s/g, '')}.md`;
+
+    // This populates the entirety of the readme file
     fs.writeFile(filename, `<!DOCTYPE html>
     <html lang="en">
     <head>
