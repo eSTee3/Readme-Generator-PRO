@@ -5,6 +5,11 @@ inquirer
     .prompt([
     {
         type: "input",
+        message: "I will ask you a series of questions that will allow me to auto-generate a README.md file that is customized for your project.\n\nNOTE: The ENTER key will immediately submit your answers or entries.\n\nPlease hit the ENTER key to begin",
+        name: "confirmStart",
+    },
+    {
+        type: "input",
         message: "Please enter your project's name:",
         name: "name",
     },
@@ -32,6 +37,12 @@ inquirer
         type: "input",
         message: "Please provide testing instructions for your project:",
         name: "testing",
+      },
+      {
+        type: 'list',
+        message: 'Please use up/down arrow keys to choose an appropriate license:',
+        name: 'license',
+        choices: ["Apache 2.0","GNU General Public v3.0","MIT ","BSD 2-Clause","BSD 3-Clause","Boost Software 1.0","Creative Commons Zero v1.0 Universal","Eclipse Public 2.0","GNU Affero General Public v3.0","GNU General Public v2.0","GNU Lesser General Public v2.1","Mozilla Public 2.0","The Unlicense"],
       },
     ])
     .then((data) => {
