@@ -68,7 +68,7 @@ inquirer
 // This will create a ".md" file with the user's project name as its name
 const filename = `${data.name.toLowerCase().replace(/\s/g, '')}.md`;
 
-    // This populates the entirety of the readme file
+    // This populates the entirety of the readme file, using the end user's inputs
     fs.writeFile(filename,`
 # ${data.name}
 ![badge](https://img.shields.io/badge/License-${data.license.replace(/\s/g, '')}-blue)
@@ -77,13 +77,13 @@ const filename = `${data.name.toLowerCase().replace(/\s/g, '')}.md`;
 ${data.description}
 
 ## Table of Contents
-- [Description](#Description)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [License](#License)
-- [Contributing](#Contributing)
-- [Tests](#Tests)
-- [Questions](#Questions)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
 # Installation
 ${data.installation}
@@ -107,7 +107,7 @@ ${data.contribute}
 # Tests
 ${data.testing}
 
-# Questions?
+# Questions
 - My GitHub Profile: [${data.gitHub}](https://www.github.com/${data.gitHub})
 - Please email me at ${data.email} with any additional questions
 
@@ -129,7 +129,7 @@ License | *${data.license}*
 
 `
     
-        // This will message the user, stating that the file creation is completed, as well as the name of the resulting file.
+        // This will message the user, stating that the file creation is completed, as well as providing them with the name of the resulting file.
         , (err) => {
         err ? console.log(err) : console.log(
             "\nThank you!\n\nYour auto-generated readme file ("+`${data.name.toLowerCase().replace(/\s/g, '')}.md`+") has been created.  Please add it to the root of "+`${data.name}`+"'s repository."
