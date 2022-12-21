@@ -7,10 +7,13 @@ This application will automatically generate a customized professional-grade rea
 - [Description](#description)
 - [Prerequisites](#prerequisites)
 - [Installation and Usage](#installation-and-usage)
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
 
 # Prerequisites
-- Updated installation of node.js
-- Visual Studio application
+- Version 16.x.x installation of Node.js: [HERE](https://nodejs.org/en/download/releases/)
+    - Search for "16" and then download/install the most recent iteration
+- Visual Studio application:  [HERE](https://visualstudio.microsoft.com/)
 
 # Installation and Usage
 1. Download the entire contents of this repo (as a .zip)
@@ -23,3 +26,25 @@ This application will automatically generate a customized professional-grade rea
 7. Answer all questions as they relate to the project that you require a README.md file for
 8. Once the confirmation message is given, find the file that it created for you and place it into the root directory of your project
 9. ENJOY!
+
+# User Story
+**_AS A_** developer
+**_I WANT_** a README generator
+**_SO THAT_** I can quickly create a professional README for a new project
+
+# Acceptance Criteria
+GIVEN a command-line application that accepts user input
+- WHEN I am prompted for information about my application repository
+    - THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+- WHEN I enter my project title
+    - THEN this is displayed as the title of the README
+- WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+    - THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+- WHEN I choose a license for my application from a list of options
+    - THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+- WHEN I enter my GitHub username
+    - THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+- WHEN I enter my email address
+    - THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+- WHEN I click on the links in the Table of Contents
+    - THEN I am taken to the corresponding section of the README
