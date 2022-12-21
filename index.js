@@ -92,7 +92,7 @@ ${data.description}
 ${data.description}
 
 # License
-This application is covered under the _${data.license}_ agreement.  You can find its details, as well as all other available licensing, below:
+This application is covered under the **_${data.license}_** agreement.  You can find its details, as well as all other available licensing, below:
 - [GNU AGPLv3](https://choosealicense.com/licenses/agpl-3.0/)
 - [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
 - [Mozilla Public License 2.0](https://choosealicense.com/licenses/mpl-2.0/)
