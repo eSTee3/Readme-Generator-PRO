@@ -2,36 +2,41 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 
 inquirer
-  .prompt([
+    .prompt([
     {
-      type: "input",
-      message: "What is your name?",
-      name: "name",
-    },
-    {
-      type: "input",
-      message: "Where are you located?",
-      name: "location",
-    },
-    {
-      type: "input",
-      message: "Tell me a few things about yourself:",
-      name: "bio",
+        type: "input",
+        message: "Please enter your project's name:",
+        name: "name",
     },
     {
         type: "input",
-        message: "Please provide your LinkedIn URL:",
-        name: "linkedIn",
+        message: "Please provide a detailed description of your project:",
+        name: "description",
+    },
+    {
+        type: "input",
+        message: "Please provide instructions for installation of your project:",
+        name: "installation",
+    },
+    {
+        type: "input",
+        message: "Please explain the usage for your project:",
+        name: "usage",
       },
       {
         type: "input",
-        message: "Please provide your GitHub name:",
-        name: "gitHub",
+        message: "Please provide guidelines for future contributions:",
+        name: "contribute",
       },
-  ])
-  .then((data) => {
+      {
+        type: "input",
+        message: "Please provide testing instructions for your project:",
+        name: "testing",
+      },
+    ])
+    .then((data) => {
     
-    const filename = `${data.name.toLowerCase().replace(/\s/g, '')}_README.md`;
+const filename = `${data.name.toLowerCase().replace(/\s/g, '')}_README.md`;
     fs.writeFile(filename, `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -53,6 +58,8 @@ inquirer
     </body>
     </html>`
         , (err) => {
-      err ? console.log(err) : console.log("Completed writing to file");
+        err ? console.log(err) : console.log(
+            "Thank you!  Your auto-generated readme file ("+`${data.name.toLowerCase().replace(/\s/g, '')}_README.md`+") has been created.  Please feel free to rename the file and place it into the root of your project's repository:"
+            );
     });
-  });
+});
