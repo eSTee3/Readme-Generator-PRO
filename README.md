@@ -8,6 +8,7 @@ This application will automatically generate a customized professional-grade rea
 - [Prerequisites](#prerequisites)
 - [Installation and Usage](#installation-and-usage)
 - [Video Demo](#application-demo-video)
+    - [Demo Readme](#link-to-readme-created-in-demo-video)
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 
@@ -31,7 +32,10 @@ This application will automatically generate a customized professional-grade rea
 # Application Demo Video
 [![Demonstration Video](https://img.youtube.com/vi/YAtJMhx-mFU/0.jpg)](https://www.youtube.com/watch?v=YAtJMhx-mFU)
 
+## [Link to readme created in demo video!](./mytestproject.md)
+---
 # User Story
+
 **_AS A_** developer
 **_I WANT_** a README generator
 **_SO THAT_** I can quickly create a professional README for a new project
