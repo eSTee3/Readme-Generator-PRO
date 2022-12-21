@@ -10,8 +10,18 @@ inquirer
     },
     {
         type: "input",
-        message: "Please enter your project's name:",
+        message: "Please enter the name of your project:",
         name: "name",
+    },
+    {
+        type: "input",
+        message: "Please enter your GitHub name:",
+        name: "gitHub",
+    },
+    {
+        type: "input",
+        message: "Please enter an email address that contributors can contact you with:",
+        name: "email",
     },
     {
         type: "input",
@@ -47,7 +57,7 @@ inquirer
     ])
     .then((data) => {
     
-const filename = `${data.name.toLowerCase().replace(/\s/g, '')}_README.md`;
+const filename = `${data.name.toLowerCase().replace(/\s/g, '')}.md`;
     fs.writeFile(filename, `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -70,7 +80,7 @@ const filename = `${data.name.toLowerCase().replace(/\s/g, '')}_README.md`;
     </html>`
         , (err) => {
         err ? console.log(err) : console.log(
-            "Thank you!  Your auto-generated readme file ("+`${data.name.toLowerCase().replace(/\s/g, '')}_README.md`+") has been created.  Please feel free to rename the file and place it into the root of your project's repository:"
+            "Thank you!  Your auto-generated readme file ("+`${data.name.toLowerCase().replace(/\s/g, '')}.md`+") has been created.  Please feel free to rename the file and place it into the root of your project's repository:"
             );
     });
 });
