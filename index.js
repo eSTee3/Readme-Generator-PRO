@@ -30,7 +30,8 @@ inquirer
       },
   ])
   .then((data) => {
-    const filename = `${data.name.toLowerCase().replace(/\s/g, '')}.html`;
+    
+    const filename = `${data.name.toLowerCase().replace(/\s/g, '')}_README.md`;
     fs.writeFile(filename, `<!DOCTYPE html>
     <html lang="en">
     <head>
