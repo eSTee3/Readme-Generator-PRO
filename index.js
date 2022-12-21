@@ -73,17 +73,17 @@ const filename = `${data.name.toLowerCase().replace(/\s/g, '')}.md`;
 # ${data.name}
 ![badge](https://img.shields.io/badge/License-${data.license.replace(/\s/g, '')}-blue)
 
+# Description
+${data.description}
+
 ## Table of Contents
 - [Description](#Description)
 - [Installation](#Installation)
 - [Usage](#Usage)
+- [License](#License)
 - [Contributing](#Contributing)
 - [Tests](#Tests)
-- [License](#License)
 - [Questions](#Questions)
-
-# Description
-${data.description}
 
 # Installation
 ${data.description}
@@ -91,16 +91,23 @@ ${data.description}
 # Usage
 ${data.description}
 
+# License
+This application is covered under the _${data.license}_ agreement.  You can find its details, as well as all other available licensing, below:
+- [GNU AGPLv3](https://choosealicense.com/licenses/agpl-3.0/)
+- [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
+- [Mozilla Public License 2.0](https://choosealicense.com/licenses/mpl-2.0/)
+- [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)
+- [MIT License](https://choosealicense.com/licenses/mit/)
+- [Boost Software License 1.0](https://choosealicense.com/licenses/bsl-1.0/)
+- [The Unlicense](https://choosealicense.com/licenses/unlicense/)
+
 # Contributing
 ${data.contribute}
 
 # Tests
 ${data.testing}
 
-# License
-You can find the ${data.license} license details as well as all others [HERE](https://choosealicense.com/licenses/)
-
-# Questions
+# Questions?
 - My GitHub Profile: [${data.gitHub}](https://www.github.com/${data.gitHub})
 - Please email me at ${data.email} with any additional questions
 `
