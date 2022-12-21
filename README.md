@@ -29,6 +29,7 @@ This application will automatically generate a customized professional-grade rea
 10. ENJOY!
 
 # Application Demo Video
+[![Demonstration Video](https://img.youtube.com/vi/YAtJMhx-mFU/0.jpg)](https://www.youtube.com/watch?v=YAtJMhx-mFU)
 
 # User Story
 **_AS A_** developer
