@@ -5,12 +5,23 @@ This application will automatically generate a customized professional-grade rea
 
 # Table of Contents
 - [Description](#description)
+- [Coding Badges](#coding-badges)
 - [Prerequisites](#prerequisites)
 - [Installation and Usage](#installation-and-usage)
 - [Video Demo](#application-demo-video)
     - [Demo Readme](#link-to-readme-created-in-demo-video)
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
+- [License](#license)
+- [How To Contribute](#how-to-contribute)
+
+
+## Coding Badges
+![alt text](https://img.shields.io/badge/Node.js-modules-green)
+![alt text](https://img.shields.io/badge/JavaScript-.js-yellowgreen)
+![alt text](https://img.shields.io/badge/HTML-.html-orange)
+![alt text](https://img.shields.io/badge/CSS-.css-blue)
+![alt text](https://img.shields.io/badge/Jest%20Test-jest-red)
 
 # Prerequisites
 - Version 16.x.x installation of Node.js: [HERE](https://nodejs.org/en/download/releases/)
@@ -56,3 +67,33 @@ GIVEN a command-line application that accepts user input
     - THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 - WHEN I click on the links in the Table of Contents
     - THEN I am taken to the corresponding section of the README
+    
+## License
+
+MIT License
+
+Copyright (c)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## How to Contribute
+
+[Contributor Covenant](https://www.contributor-covenant.org/)
